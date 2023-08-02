@@ -931,24 +931,6 @@ swiper-slide img {
     flex-direction: column;
   }
 }
-.modal__container::after {
-  content: "";
-  flex: 0 0 350px;
-  background-image: url("./../img/modal__bg-desc.jpeg");
-  background-position: center;
-  background-size: cover;
-}
-@media (max-width: 920px) {
-  .modal__container::after {
-    flex: 0 0 192px;
-    background-image: url("./../img/modal__bg-tablet.jpeg");
-  }
-}
-@media (max-width: 580px) {
-  .modal__container::after {
-    background-image: url("./../img/modal__bg-mobile.jpeg");
-  }
-}
 .modal__content {
   padding: 30px;
 }

@@ -32,23 +32,6 @@
       @include mobile {
         flex-direction: column;
       }
-
-      &::after {
-        content: '';
-        flex: 0 0 350px;
-        background-image: url('./../img/modal__bg-desc.jpeg');
-        background-position: center;
-        background-size: cover;
-
-        @include tablet {
-          flex: 0 0 192px;
-          background-image: url('./../img/modal__bg-tablet.jpeg');
-        }
-
-        @include mobile {
-          background-image: url('./../img/modal__bg-mobile.jpeg');
-        }
-      }
 		}
 
 		// .modal__content
