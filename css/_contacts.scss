@@ -1,0 +1,123 @@
+.contacts {
+  margin-top: 100px;
+
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+
+    @include tablet {
+      flex-direction: column;
+    }
+  }
+
+  &__wrapper {
+    min-width: 400px;
+  }
+
+  &__title {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 88px;
+    margin-bottom: 38px;
+
+    @include tablet {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 45px;
+    padding-left: 80px;
+
+    & span {
+      margin-bottom: 3px;
+    }
+
+    &:last-child {
+      margin-top: 62px;
+      margin-bottom: 0;
+
+      @include tablet {
+        margin-top: 0;
+      }
+    }
+
+    &_phone {
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        display: flex;
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        background-color: #D3B47F;
+        background-image: url("./../assets/img/call-calling.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+
+    &_mail {
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        display: flex;
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        background-color: #D3B47F;
+        background-image: url("./../assets/img/sms.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+
+    &_opening {
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        display: flex;
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        background-color: #D3B47F;
+        background-image: url("./../assets/img/clock.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+
+    &_street {
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        display: flex;
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        background-color: #D3B47F;
+        background-image: url("./../assets/img/map.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+  }
+
+  &__type {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32px; 
+  }
+}

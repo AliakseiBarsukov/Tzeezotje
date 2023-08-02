@@ -1,0 +1,98 @@
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+*, ::after, ::before {
+  box-sizing: inherit;
+}
+
+body {
+  overflow-x: hidden;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: Poppins, sans-serif;
+  font-size: 16px;
+  line-height: normal;
+  font-weight: 400;
+  color: #000;
+}
+
+svg, img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+}
+
+button {
+  padding: 0;
+  cursor: pointer;
+  border: none;
+  background-color: inherit;
+  color: inherit;
+  font: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul, li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1, h2, h3, h4, p {
+  margin: 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.container {
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 0 30px;
+
+  @include laptop {
+    padding: 0 15px;
+  }
+
+  @include tablet {
+    max-width: 870px;
+    padding: 0 10px;
+  }
+
+  @include mobile {
+    padding: 0 6px;
+  }
+}
+
+.visually-hidden {
+  position: fixed;
+  transform: scale(0);
+}
+
+.link {
+  transition: color .3s ease-in-out;
+
+  &:hover {
+    color: #D3B47F;
+  }
+}
+
+.btn {
+  transition: color .3s ease-in-out;
+  &:hover {
+    color: #D3B47F;
+  }
+}
+
+

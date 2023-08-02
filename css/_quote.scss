@@ -1,0 +1,91 @@
+.quote {
+  background-color: #3A4574;
+  margin-bottom: 109px; 
+
+  &__container {
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  &__slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #3A4574;
+
+    &_wrapper {
+      max-width: 785px;
+      padding: 220px 0;
+
+      @include laptop {
+        padding: 120px 0;
+      }
+
+      @include tablet {
+        padding: 80px 0;
+        max-width: 560px;
+      }
+    }
+  }
+
+  &__img {
+    width: 86px;
+    margin: 0 auto;
+    padding-bottom: 34px;
+  }
+
+  &__title {
+    color: #D3B47F;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 40px; 
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  &__text {
+    color: #fff;
+    font-size: 16px;
+    line-height: 40px;
+    margin-bottom: 28px;
+    text-align: center;
+  }
+
+  &__author {
+    color: #D3B47F;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 40px;
+    letter-spacing: 5.88px;
+    text-align: center;
+  }
+
+  &__btns {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+
+  &__btn_next {
+    position: absolute;
+    z-index: 5;
+    left: 31px;
+    top: 45%;
+
+    @include tablet {
+      position: static;
+    }
+  }
+
+  &__btn_prev {
+    position: absolute;
+    z-index: 5;
+    right: 31px;
+    top: 45%;
+    transform: rotate(180deg);
+
+    @include tablet {
+      position: static;
+    }
+  }
+}

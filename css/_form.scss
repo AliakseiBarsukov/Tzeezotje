@@ -1,0 +1,62 @@
+.form {
+  max-width: 670px;
+  width: 100%;
+
+  @include tablet {
+    max-width: 100%;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    gap: 19px;
+    margin-bottom: 24px;
+
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+
+  &__lable {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  &__input input {
+    width: 100%;
+    padding: 28px 16px;
+  }
+
+  &__input {
+    width: 100%;
+
+    &:last-child {
+      margin-right: 20px;
+
+      @include tablet {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__message {
+    margin-bottom: 20px;
+  }
+
+  &__message textarea {
+    width: 100%;
+    padding: 28px 16px;
+    min-height: 125px;
+    resize: none;
+  }
+
+  &__btn {
+    padding: 38px 104px;
+    color: #fff;
+    background-color: #3A4574;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+  }
+}
