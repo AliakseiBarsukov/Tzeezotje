@@ -43,7 +43,7 @@
         <div class="header__menu menu-js menu-icon-wrapper">
           <div class="menu-icon"></div>
         </div>
-      <div class="overlay"></div>
+        <div class="overlay"></div>
       </div>
       <h1 class="visually-hidden">Tzeezotje - restoran</h1>
       <p class="header__subtitle">OPEN EVERYDAY 6AM - 9PM</p>
@@ -307,6 +307,40 @@
     </section>
   </main>
   <footer class="footer"></footer>
+
+  <div class="modal">
+    <div class="modal__main">
+      <div class="modal__container">
+        <div class="modal__content">
+          <h2 class="modal__title">Оставьте заявку и&nbsp; мы&nbsp; перезвоним</h2>
+          <p class="modal__subtitle">Наши мастера свяжутся с&nbsp; вами в&nbsp; течение 3 часов</p>
+
+          <form class="modal__form">
+            <fieldset class="modal__fieldset">
+              <label class="modal__wrapper-input">
+                <span class="modal__text span__text">Имя</span>
+                <input type="text" class="modal__input" name="name" id="name">
+              </label>
+
+              <label class="modal__wrapper-input">
+                <span class="modal__text span__text">Телефон</span>
+                <input type="tel" class="modal__input" name="phone" id="phone">
+              </label>
+            </fieldset>
+
+            <button class="btn modal__submit" type="submit">Отправить</button>
+          </form>
+        </div>
+      </div>
+      <button class="modal__close">
+        <svg width="32" height="32" viewBox="0 0 32 32" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path d="M21 11L11 21" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M21 21L11 11" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+          
+      </button>
+    </div>
+  </div>
 </body>
 
 </html>
