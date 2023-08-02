@@ -58,7 +58,7 @@ const scrollController = {
   },
   enabledScroll() {
     document.body.style.cssText = '';
-    window.scroll({top: scrollController.scrollPosition});
+    window.scroll({ top: scrollController.scrollPosition });
     document.documentElement.style.scrollBehavior = '';
   },
 
@@ -106,7 +106,7 @@ menuClose();
 
 
 
-const modalController = ({modal, btnOpen, btnClose, modalSubmit, time = 300}) => {
+const modalController = ({ modal, btnOpen, btnClose, modalSubmit, time = 300 }) => {
   const buttonElems = document.querySelectorAll(btnOpen);
   const modalElem = document.querySelector(modal);
 
@@ -123,10 +123,10 @@ const modalController = ({modal, btnOpen, btnClose, modalSubmit, time = 300}) =>
     if (
       target === modalElem ||
       (btnClose && target.closest(btnClose)) ||
-      // (modalSubmit && target.closest(modalSubmit)) ||
+      (modalSubmit && target.closest(modalSubmit)) ||
       event.code === 'Escape'
-      ) {
-      
+    ) {
+
       modalElem.style.opacity = 0;
 
       setTimeout(() => {
@@ -153,8 +153,33 @@ const modalController = ({modal, btnOpen, btnClose, modalSubmit, time = 300}) =>
 };
 
 modalController({
-  modal: '.modal', 
-  btnOpen: '.header__btn', 
-  btnClose: '.modal__close', 
+  modal: '.modal',
+  btnOpen: '.header__btn',
+  btnClose: '.modal__close',
   modalSubmit: '.modal__submit',
+});
+
+$(document).ready(function () {
+  $("#myForm").on("submit", function (event) {
+    event.preventDefault(); // Отменяем стандартное поведение формы
+    // Получаем данные из полей формы
+    const data = {
+      name: $("#name").val(),
+      phone: $("#phone").val(),
+    };
+    // Отправляем данные на сервер с помощью AJAX
+    $.ajax({
+      url: "/your_server_endpoint", // Здесь указываем URL-адрес серверного обработчика
+      type: "post",
+      data: data,
+      success: function (response) {
+        // Обработка успешной отправки данных
+        console.log("Данные успешно отправлены!");
+      },
+      error: function (error) {
+        // Обработка ошибок при отправке данных
+        alert("Ошибка при отправке данных: ", error);
+      },
+    });
+  });
 });
