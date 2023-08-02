@@ -422,7 +422,9 @@ fieldset {
 @media (max-width: 1130px) {
   .menu__list {
     max-width: 470px;
+    min-width: 100%;
     margin: 0 auto;
+    padding-bottom: 0;
   }
 }
 .menu__item {
@@ -683,7 +685,6 @@ swiper-slide img {
 .gallery {
   position: relative;
   color: #fff;
-  display: none;
 }
 .gallery::after {
   position: absolute;
@@ -700,6 +701,11 @@ swiper-slide img {
   justify-content: space-between;
   align-items: center;
 }
+@media (max-width: 580px) {
+  .gallery__wrapper {
+    flex-direction: column;
+  }
+}
 .gallery__content {
   max-width: 493px;
   padding: 68px 0 50px;
@@ -715,6 +721,11 @@ swiper-slide img {
 }
 .gallery__slider_btns {
   margin-top: 25px;
+}
+@media (max-width: 580px) {
+  .gallery__slider_btns {
+    margin-top: 0;
+  }
 }
 .gallery__btn_next {
   margin-right: 25px;

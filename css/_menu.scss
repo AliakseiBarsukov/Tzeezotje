@@ -33,7 +33,9 @@
 
     @include laptop {
       max-width: 470px;
+      min-width: 100%;
       margin: 0 auto;
+      padding-bottom: 0;
     }
   }
 

@@ -1,7 +1,6 @@
 .gallery {
   position: relative;
   color: #fff;
-  display: none;;
 
   &::after {
     position: absolute;
@@ -18,6 +17,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include mobile {
+      flex-direction: column;
+    }
   }
 
   &__content {
@@ -38,6 +41,10 @@
 
   &__slider_btns {
     margin-top: 25px;
+
+    @include mobile {
+      margin-top: 0;
+    }
   }
 
   &__btn_next {
